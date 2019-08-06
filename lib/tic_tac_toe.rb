@@ -34,7 +34,13 @@ class TicTacToe
 
 
 def move(index, player = "X")
+<<<<<<< HEAD
     @board[index] = player
+=======
+  if valid_move?(index)
+    @board[index] = player
+  end
+>>>>>>> 5f56a324cf8096d1e0496bb5f4c1bd4793bec634
 end
 
 def position_taken?(index)
@@ -54,11 +60,20 @@ def turn
   puts "Please enter a number 1-9"
   input = gets.chomp
   index = input_to_index(input)
+<<<<<<< HEAD
   fix_index = index
   if valid_move?(fix_index)
     move(fix_index, current_player)
     display_board
   else
+=======
+  puts index
+  if valid_move?(index)
+    move(index, current_player)
+    display_board
+  else
+    puts "hello"
+>>>>>>> 5f56a324cf8096d1e0496bb5f4c1bd4793bec634
     turn
   end
 end
@@ -120,4 +135,7 @@ def play
 end
 
 end # of class
+<<<<<<< HEAD
 #
+=======
+>>>>>>> 5f56a324cf8096d1e0496bb5f4c1bd4793bec634
